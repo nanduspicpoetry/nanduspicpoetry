@@ -1,27 +1,29 @@
-// script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandu's Pic Poetry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nandu's Pic Poetry</h1>
+        <p>A Symphony of Words and Pictures</p>
+    </header>
 
-// Smooth scroll when clicking nav links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1); // Remove the #
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  });
-});
+    <main>
+        <section class="poetry-gallery" id="gallery">
+            <!-- Poems will appear here -->
+        </section>
 
-// Add a greeting message in the console
-console.log("Welcome to Nandu's Pic Poetry 🌸💜 - Enjoy the beauty!");
+        <button id="addPoemBtn">Add a New Poem</button>
+    </main>
 
-// Optional: Add fade-in animation on page load
-window.addEventListener('load', () => {
-  document.body.style.opacity = 0;
-  setTimeout(() => {
-    document.body.style.transition = 'opacity 2s';
-    document.body.style.opacity = 1;
-  }, 100);
-});
+    <footer>
+        <p>Made with 💜 by Nandini</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
