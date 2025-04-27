@@ -1,100 +1,94 @@
-/* General Body Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
-    background: #fffaf5; /* light pastel background */
-    color: #333; /* soft text color */
+    box-sizing: border-box;
 }
 
-/* Header Styling */
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f0fa;
+    color: #4b4453;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
 header {
-    background: #f0e6f6; /* soft lavender */
-    padding: 20px;
     text-align: center;
+    background: #d8b4e2;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #c59ace;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #6a1b9a; /* deep purple */
+    font-size: 2.5rem;
+    color: #5e4b8b;
 }
 
-/* Navigation Links */
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #6a1b9a;
-    font-weight: bold;
-    font-size: 1.1em;
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #7a659e;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content Area */
-main {
-    padding: 30px;
-    text-align: center;
-}
-
-/* Hero Section (Homepage Special Area) */
-.hero {
-    background: #ffe3ed; /* soft pink */
-    padding: 50px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.hero h2 {
-    font-size: 2em;
-    color: #d81b60; /* rose pink */
-}
-
-.hero p {
-    font-size: 1.2em;
-    color: #6a1b9a;
-}
-
-/* Gallery Page */
-.gallery {
+/* Gallery Section */
+.poetry-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    gap: 1.5rem;
+    padding: 2rem;
+    flex: 1;
 }
 
-.gallery-item img {
+/* Poem Card */
+.poetry-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(128, 90, 213, 0.2);
+    transition: transform 0.2s;
+}
+
+.poetry-card:hover {
+    transform: translateY(-5px);
+}
+
+.poetry-card img {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.gallery-item p {
-    margin-top: 10px;
-    font-style: italic;
-    color: #555;
+.poetry-card p {
+    font-size: 1rem;
+    color: #5c5470;
 }
 
-/* Footer Styling */
+/* Button */
+#addPoemBtn {
+    background-color: #bfa2db;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addPoemBtn:hover {
+    background-color: #a06cd5;
+}
+
+/* Footer */
 footer {
-    background: #f0e6f6;
-    padding: 10px;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #6a1b9a;
-}
-
-/* Responsive for Mobile */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+    padding: 1rem;
+    background: #d8b4e2;
+    color: #5e4b8b;
 }
